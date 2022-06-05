@@ -1,0 +1,31 @@
+<html>
+    <body>
+    <h2 style="color: red ;">
+    hola esta es la primera plantilla 
+    </h2>
+    
+    {% if nombre_persona ==   'Profesor Juan' %}
+        <p>El curso lo imparte el profesor titular</p>
+    {% else %}
+    <p>El cuerso lo imparte el profesor suplente </p>
+    {% endif %}    
+
+    <p>El nombre del profesor es: {{nombre_persona.upper}} {{apellido_persona.upper}}</p>
+    <p>estamos  vinedo el tema de plantillas a d&iacute;a {{momento_actual.day}}</p>
+    <p><strong>Temas del curso:</strong></p>
+    <p> <ul>
+        {% if temas %}
+             {% for elTema in temas %}
+
+                <li>{{elTema}}</li>
+
+
+             {% endfor %}
+        {% else %}
+         <p>No hay elementos que mostrar </p>     
+        {% endif %}
+    </ul>
+
+    </p>
+    </boody>
+    </html>
